@@ -1,8 +1,12 @@
 *.log
 .DS_Store
+
+# Environment
 .env
 .env.backup
 .env.production
+
+# Cache & IDE
 .phpactor.json
 .phpunit.result.cache
 /.fleet
@@ -11,14 +15,30 @@
 /.phpunit.cache
 /.vscode
 /.zed
+
+# Auth
 /auth.json
+
+# Node
 /node_modules
+
+# Laravel build & hot reload
 /public/build
 /public/hot
-/public/storage
-/storage/*.key
-/storage/pail
+
+# ⛔ JANGAN IGNORE public/storage (dibutuhin buat gambar)
+# /public/storage
+
+# Storage keys (tetap aman)
+ /storage/*.key
+ /storage/pail
+
+# Vendor
 /vendor
+
+# Homestead
 Homestead.json
 Homestead.yaml
+
+# Windows
 Thumbs.db

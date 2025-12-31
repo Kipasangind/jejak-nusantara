@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Culture;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Schema; 
 
 class CultureSeeder extends Seeder
 {
@@ -73,6 +74,9 @@ class CultureSeeder extends Seeder
             ],
         ];
 
+        
+        Schema::disableForeignKeyConstraints();
+
         foreach ($data as $item) {
             Culture::create([
                 'title' => $item['title'],
@@ -81,8 +85,10 @@ class CultureSeeder extends Seeder
                 'province' => $item['province'],
                 'description' => $item['description'],
                 'image' => null,
-                'created_by' => 1
+                'created_by' => 1 
             ]);
         }
+
+        Schema::enableForeignKeyConstraints();
     }
 }
