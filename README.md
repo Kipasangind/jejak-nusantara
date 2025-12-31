@@ -1,81 +1,106 @@
-🧭 Jejak Nusantara – Platform Digital Budaya Indonesia
-Melestarikan budaya, satu klik pada satu waktu.
-📌 Deskripsi Singkat
-Jejak Nusantara adalah aplikasi web berbasis Laravel 10 yang berfungsi sebagai wadaya digital untuk mendokumentasikan, mengenalkan, dan melestarikan kekayaan budaya Indonesia. Data budaya dapat dikontribusikan oleh siapa pun, memastikan informasi tetap aktual dan berkembang bersama masyarakat.
-🎯 Tujuan Utama
-Melestarikan budaya Indonesia dalam bentuk digital.
-Menjadi media edukasi budaya yang mudah diakses.
-Memberi ruang kontribusi publik dalam pendataan budaya.
-Mendukung pembelajaran berbasis teknologi.
-✨ Fitur Unggulan
-Table
-Copy
-Fitur	Keterangan
-📚 Daftar Budaya Nusantara	Lengkap dengan deskripsi, asal daerah, & gambar.
-🗺️ Jelajah per Wilayah	Filter budaya berdasarkan provinsi/kabupaten.
-🆕 Budaya Terbaru	Tampilkan kontribusi teranyar.
-🤝 Kontribusi Pengguna	Form unggah budaya (gambar + teks).
-🛠️ Panel Admin	Review, setujui, atau tolak kontribusi.
-🔐 Login / Register	UI lengkap (dummy, tanpa backend auth).
-📷 Media Storage	Menggunakan Laravel Storage untuk gambar budaya.
-🧑‍💻 Teknologi yang Dipakai
-Laravel 10 (PHP 8)
-MySQL / MariaDB
-Blade Template Engine
-Tailwind CSS
-Git & GitHub
-📁 Struktur Folder Utama
-Copy
+# Jejak Nusantara – Platform Digital Budaya Indonesia
+
+## 🧭 Deskripsi Proyek
+Jejak Nusantara adalah aplikasi web berbasis Laravel yang bertujuan untuk mendokumentasikan, mengenalkan, dan melestarikan budaya Indonesia secara digital.  
+Platform ini menyediakan informasi budaya dari berbagai daerah di Indonesia, dilengkapi dengan fitur kontribusi publik agar data budaya dapat terus berkembang.
+
+## 🎯 Tujuan
+- Melestarikan budaya Indonesia dalam bentuk digital
+- Menjadi media edukasi budaya yang mudah diakses
+- Memberi ruang kontribusi publik dalam pendataan budaya
+- Mendukung pembelajaran berbasis teknologi
+
+## ✨ Fitur Utama
+- 📚 Daftar Budaya Nusantara (lengkap dengan detail)
+- 🗺️ Jelajah Budaya Berdasarkan Wilayah
+- 🆕 Budaya Terbaru
+- 🤝 Kontribusi Budaya oleh Pengguna
+- 🛠️ Panel Admin untuk Review Kontribusi
+- 📷 Gambar Budaya (Storage Laravel)
+- 🔐 Login & Register (Dummy / UI Only)
+
+## 🧑‍💻 Teknologi yang Digunakan
+- Laravel 10
+- PHP 8
+- Blade Template Engine
+- Tailwind CSS
+- MySQL / MariaDB
+- Git & GitHub
+
+## 📂 Struktur Folder Penting
+```
 jejak-nusantara/
 ├── app/
 ├── database/
 │   └── seeders/
-│       └── CultureSeeder.php   ← data dummy budaya
+│       └── CultureSeeder.php
 ├── public/
-│   └── storage/                ← symlink ke app/storage/app/public
-├── resources/views/
-├── routes/web.php
+│   └── storage/   ← (gambar budaya)
+├── resources/
+│   └── views/
+├── routes/
+│   └── web.php
 ├── .env.example
 └── README.md
-🚀 Panduan Instalasi (5 Menit)
-Clone repo
-bash
-Copy
+```
+
+## 🗄️ Database & Dummy Data
+Project ini menggunakan **Laravel Seeder** untuk data awal budaya.  
+Seeder yang digunakan: `database/seeders/CultureSeeder.php`  
+
+Seeder ini berisi data dummy budaya agar aplikasi langsung menampilkan konten saat dijalankan.
+
+## 🚀 Cara Menjalankan Project
+### 1. Clone Repository
+```bash
 git clone https://github.com/Kipasangind/jejak-nusantara.git
 cd jejak-nusantara
-Install dependensi
-bash
-Copy
-composer install --optimize-autoloader --no-dev
-Salin & sesuaikan env
-bash
-Copy
+```
+
+### 2. Install Dependency
+```bash
+composer install
+```
+
+### 3. Setup Environment
+```bash
 cp .env.example .env
 php artisan key:generate
-# edit DB_* sesuai kebutuhan
-Migrasi + seeder
-bash
-Copy
+```
+⚠️ Atur database di file `.env`
+
+### 4. Migrasi & Seeder
+```bash
 php artisan migrate --seed
-Buat symlink storage
-bash
-Copy
+```
+
+### 5. Storage Link
+```bash
 php artisan storage:link
-Jalankan server
-bash
-Copy
+```
+
+### 6. Jalankan Server
+```bash
 php artisan serve
-Buka browser: http://127.0.0.1:8000
-🖼️ Catatan Gambar
-Folder public/storage sudah di-push ke GitHub agar gambar dummy langsung tampil.
-Pastikan tetap menjalankan php artisan storage:link jika kamu menambahkan file baru.
-👤 Kontributor
-Vincent Tan
-Project ini dibuat untuk keperluan lomba / ujian akhir sekolah.
-📄 Lisensi
-Proyek ini bersifat edukatif & non-komersial. Silakan fork dan kembangkan lebih lanjut dengan mencantumkan sumber asli.
-✅ Status Project
-[x] Selesai
-[x] Data dummy tersedia
-[x] Siap dinilai / dipresentasikan
-Selamat menjelajahi budaya Nusantara! 🌏
+```
+
+Akses di browser:  
+http://127.0.0.1:8000
+
+## 🖼️ Catatan Penting
+- Folder `public/storage` tidak di-ignore dan sudah di-upload ke GitHub  
+- Pastikan menjalankan `php artisan storage:link` agar gambar budaya muncul
+
+## 👤 Kontributor
+- Nama: Vincent Tan  
+- Project: Lomba / Ujian Akhir  
+- Sekolah: (isi sesuai kebutuhan)
+
+## 📌 Status Project
+- ✅ Selesai
+- ✅ Siap Dinilai
+- ✅ Siap Dipresentasikan
+- ✅ Data Dummy Tersedia
+
+## 📄 Lisensi
+Proyek ini dibuat untuk keperluan pendidikan dan lomba.
