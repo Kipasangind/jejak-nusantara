@@ -93,11 +93,11 @@ http://127.0.0.1:8000
 
 ## 👤 Kontributor
 - Nama: Vincent Tan  
-- Project: Lomba / Ujian Akhir  
-- Sekolah: (isi sesuai kebutuhan)
+- Project: Lomba / Kontribusi Negara  
+- Sekolah: SMK Cinta Kasih Tzu Chi
 
 ## 📌 Status Project
-- ✅ Selesai
+- ✅ Selesai - 95%
 - ✅ Siap Dinilai
 - ✅ Siap Dipresentasikan
 - ✅ Data Dummy Tersedia
